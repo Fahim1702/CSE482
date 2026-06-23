@@ -1,0 +1,156 @@
+/* ---- Reset & Base ---- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f9f9f9;
+}
+
+/* ---- Header & Nav (Flexbox) ---- */
+header {
+    background: #2c3e50;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: #f1c40f;
+    border-bottom-color: #f1c40f;
+}
+
+nav a.active {
+    border-bottom-color: #f1c40f;
+    color: #f1c40f;
+}
+
+/* ---- Hero Section ---- */
+.hero {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: #fff;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ---- Sections (Grid on travel pages?) ---- */
+section {
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.intro, .destination {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin: 2rem auto;
+}
+
+.destination h1 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.destination figure {
+    margin: 1rem 0;
+}
+
+.destination img {
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.destination figcaption {
+    font-style: italic;
+    margin-top: 0.5rem;
+    color: #555;
+}
+
+/* ---- Footer ---- */
+footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #f1c40f;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ---- Responsive Design (Media Queries) ---- */
+/* Tablet */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    .hero {
+        padding: 2rem 1rem;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    section {
+        padding: 1rem;
+    }
+    .destination {
+        padding: 1.2rem;
+    }
+}
